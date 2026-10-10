@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <ul class="images-list"></ul>
-    <button data-action="load-more">Load More</button>
+    <div class="images-container">
+      <ul class="images-list" data-list></ul>
+      <button class="load-more" data-btn="load-more">Load More</button>
+      <p id="no-more-msg" data-no-more>No more images to load.</p>
+    </div>
     <script src="./js/index.js"></script>
   </body>
 </html>
