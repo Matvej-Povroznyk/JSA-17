@@ -1,23 +1,23 @@
 {
-  "name": "parcel-template",
+  "name": "jsa-17-hw",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "parcel build src/index.html --public-url /parcel-template/",
+    "build": "parcel build src/index.html --public-url /JSA-17/",
     "dev": "parcel src/index.html "
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Matvej-Povroznyk/parcel-template.git"
+    "url": "git+https://github.com/Matvej-Povroznyk/JSA-17.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/Matvej-Povroznyk/parcel-template/issues"
+    "url": "https://github.com/Matvej-Povroznyk/JSA-17/issues"
   },
-  "homepage": "https://github.com/Matvej-Povroznyk/parcel-template#readme",
+  "homepage": "https://github.com/Matvej-Povroznyk/JSA-17#readme",
   "devDependencies": {
     "parcel": "^2.16.4"
   }
