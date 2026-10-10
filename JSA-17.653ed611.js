@@ -1,0 +1,7 @@
+class PixabayApi{constructor({apiKey:e,baseUrl:a="https://pixabay.com/api/"}){this.apiKey=e,this.baseUrl=a,this.page=1,this.perPage=15}fetchImages(){return fetch(`${this.baseUrl}?key=${this.apiKey}&editors_choice=true&image_type=photo&orientation=horizontal&safesearch=true&page=${this.page}&per_page=${this.perPage}`).then(e=>{if(!e.ok)throw Error(e.status);return e.json()}).catch(e=>{console.error(e)})}incrementPage(){this.page+=1}decrementPage(){this.page-=1}resetPage(){this.page=1}}const pixabayAPI=new PixabayApi({apiKey:"39409700-74de25685e9a6a3e702d9f6e8"}),imagesList=document.querySelector("[data-list]"),loadMoreBtn=document.querySelector("[data-btn='load-more']"),noMoreMsg=document.querySelector("[data-no-more]"),renderImages=e=>{let a=e.map(e=>`
+        <li class="image-item">
+          <img src="${e.webformatURL}" alt="${e.tags}" />
+        </li>
+
+        `).join("");imagesList.insertAdjacentHTML("beforeend",a)},fetchAndRenderImages=()=>{pixabayAPI.fetchImages().then(e=>{e&&e.hits&&(renderImages(e.hits),pixabayAPI.page*pixabayAPI.perPage>=e.totalHits||0===e.hits.length?(loadMoreBtn.style.display="none",noMoreMsg.style.display="block"):(loadMoreBtn.style.display="block",noMoreMsg.style.display="none"))})},handleLoadMoreClick=()=>{pixabayAPI.incrementPage(),fetchAndRenderImages()};loadMoreBtn.addEventListener("click",handleLoadMoreClick),fetchAndRenderImages();
+//# sourceMappingURL=JSA-17.653ed611.js.map

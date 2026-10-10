@@ -1,1 +1,0 @@
-{"mappings":"ACAA","sources":["JSA-17.b39ce9ae.css","src/css/style.css"],"sourcesContent":["*, :before, :after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n/*# sourceMappingURL=JSA-17.b39ce9ae.css.map */\n","*,\n*::before,\n*::after {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n"],"names":[],"version":3,"file":"JSA-17.b39ce9ae.css.map"}
